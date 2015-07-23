@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <h1><center> Most awesome app</center></h1>
+  </div>
+ </div>
+
+ 
+
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <a href="#" class="thumbnail">
+        <img src="<%=@solid.picture%>" alt="...">
+      </a>
+    </div>
+      <div class="col-sm-9">
+       <div class="page-header">
+         <h1><%=@solid.scientist_name%> <small>Member since <%=@solid.date%></small></h1>
+       </div>
+         <p><%=@solid.bio%></p>
+      
+        <p><b>location:</b> <%=@solid.location%></p>
+        <p><b>Completion:</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="<%=@solid.percent%>" aria-valuemin="0" aria-valuemax="100" style="width: <%=@solid.percent%>%;"><%=@solid.percent%>%
+        </div>
+      </div>
+     </div>
+  </div>
+</body>
+  </html>
