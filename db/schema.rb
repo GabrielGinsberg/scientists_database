@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723155127) do
+ActiveRecord::Schema.define(version: 20150724161951) do
+
+  create_table "pros", force: :cascade do |t|
+    t.string   "url"
+    t.string   "caption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skeets", force: :cascade do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "solids", force: :cascade do |t|
     t.string   "picture"
@@ -22,6 +36,11 @@ ActiveRecord::Schema.define(version: 20150723155127) do
     t.string   "percent"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "yeets", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
