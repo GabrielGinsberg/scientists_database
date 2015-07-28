@@ -45,5 +45,10 @@ end
   def destroy
     s = Solid.find_by_id(params['id'])
     s.destroy
+    redirect_to "/pro"
+  end
+  
+  def index 
+    @solids = Solid.all
   end
 end

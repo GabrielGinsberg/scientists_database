@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/pro/:id/edit' => 'application#edit'
   get '/update/:id' => 'application#update'
   get '/pro/:id/destroy' => 'application#destroy'
+  get '/pro' => 'application#index'
 end
