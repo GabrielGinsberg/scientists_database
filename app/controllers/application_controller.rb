@@ -41,4 +41,9 @@ end
     s.save
     redirect_to "/pro/#{ s.id }"
   end
+  
+  def destroy
+    s = Solid.find_by_id(params['id'])
+    s.destroy
+  end
 end
