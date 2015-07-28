@@ -10,31 +10,35 @@ def show
     render 'sitenl'
   end
 end
-  
+
   def new
-  end
-  
-  def form
-    s = Solid.new
-    s.picture = params['picture']
-    s.scientist_name = params['name']
-    s.date = params['date']
-    s.bio = params['bio']
-    s.location = ['location']
-    s.percent = ['percent']
-    s.save
-    redirect_to "/pro/#{s.id}"
   end
   
   def create
     s = Solid.new
+    s.scientist_name = params['scientist_name']
     s.picture = params['picture']
-    s.scientist_name = params['name']
     s.date = params['date']
-    s.bio = params['bio']
-    s.location = ['location']
-    s.percent = ['percent']
+    s. bio = params['bio']
+    s.location = params['location']
+    s.percent = params['percent']
     s.save
-    render 'show'
+    redirect_to "/pro/#{ s.id }"
+  end
+  
+  def edit
+    @solid = Solid.find_by_id(params['id'])
+  end
+  
+  def update
+    s = Solid.find_by_id(params['id'])
+    s.scientist_name = params['scientist_name']
+    s.picture = params['picture']
+    s.date = params['date']
+    s. bio = params['bio']
+    s.location = params['location']
+    s.percent = params['percent']
+    s.save
+    redirect_to "/pro/#{ s.id }"
   end
 end

@@ -1,0 +1,11 @@
+<h2>Edit Scientist</h2>
+
+<form action="/update/<%=@solid.id%>">
+  <input type="text" name="scientist_name" placeholder="First Last" value="<%=@solid.scientist_name%>">
+ <input type="text" name="picture" placeholder="Url" value="<%=@solid.picture%>">
+ <input type="text" name="date" placeholder="Date Joined" value="<%=@solid.date%>">
+ <input type="text" name="Location" placeholder="Location" value="<%=@solid.location%>">
+ <input type="text" name="bio" placeholder="Biography" value="<%=@solid.bio%>">
+  <input type="text" name="percent" placeholder="Percent of Completion" value="<%=@solid.percent%>">
+  <input type="submit">
+</form>
